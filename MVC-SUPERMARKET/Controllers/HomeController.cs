@@ -8,10 +8,5 @@ namespace MVC_SUPERMARKET.Controllers
         {
             return View();
         }
-
-        public IActionResult Error()
-        {
-            return View("Error");
-        }
     }
 }
