@@ -8,5 +8,14 @@ namespace MVC_SUPERMARKET.Controllers
         {            
             return View(); 
         }
+
+        public IActionResult Edit(int? id)
+        {
+            if(id.HasValue)
+            {
+                return new ContentResult { Content = "You're viewing categories with id: " + id.ToString() };
+            }
+            return new ContentResult { Content = "Null content" };
+        }
     }
 }
