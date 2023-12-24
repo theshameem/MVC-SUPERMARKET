@@ -6,6 +6,7 @@ namespace MVC_SUPERMARKET.Controllers
     {
         public IActionResult Index()
         {            
+            //I will something new here
             return View(); 
         }
     }
