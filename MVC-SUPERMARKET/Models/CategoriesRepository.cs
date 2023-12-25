@@ -5,8 +5,8 @@
 		private static List<Category> _categories = new List<Category>()
 		{
 			new Category{CategoryId = 1, Name = "Beverage", Description = "Beverage"},
-			new Category{CategoryId = 1, Name = "Beverage", Description = "Beverage"},
-			new Category{CategoryId = 1, Name = "Beverage", Description = "Beverage"},
+			new Category{CategoryId = 1, Name = "Bakery", Description = "Bakery"},
+			new Category{CategoryId = 1, Name = "Meat", Description = "Meat"},
 		};
 
 		public static void AddCategory(Category category)
