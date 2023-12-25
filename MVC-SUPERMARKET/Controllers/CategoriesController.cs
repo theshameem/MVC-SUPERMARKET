@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using MVC_SUPERMARKET.Models;
 
 namespace MVC_SUPERMARKET.Controllers
 {
@@ -11,11 +12,9 @@ namespace MVC_SUPERMARKET.Controllers
 
         public IActionResult Edit(int? id)
         {
-            if(id.HasValue)
-            {
-                return new ContentResult { Content = "You're viewing categories with id: " + id.ToString() };
-            }
-            return new ContentResult { Content = "Null content" };
+            var category = new Category { CategoryId = id.HasValue ? id.Value : 0 };
+            
+            return View(category);
         }
     }
 }
