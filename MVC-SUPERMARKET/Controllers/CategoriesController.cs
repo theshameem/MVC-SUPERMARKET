@@ -32,7 +32,7 @@ namespace MVC_SUPERMARKET.Controllers
 
         public IActionResult Add()
         {
-            return View();  
+            return View();   
         }
 
         [HttpPost]
@@ -45,6 +45,12 @@ namespace MVC_SUPERMARKET.Controllers
             }
 
             return View(category) ;
+        }
+
+        public IActionResult Delete(int CategoryId)
+        {
+            CategoriesRepository.DeleteCategory(CategoryId);
+            return RedirectToAction(nameof(Index));
         }
     }
 }
