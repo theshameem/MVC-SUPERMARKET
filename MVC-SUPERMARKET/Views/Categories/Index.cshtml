@@ -12,6 +12,7 @@
                 <th scope="col">Name</th>
                 <th scope="col">Description</th>
                 <td></td>
+                <td></td>
             </tr>
         </thead>
         <tbody>
@@ -22,6 +23,10 @@
                     <td>@category.Description</td>
                     <td>
                         <a class="btn btn-primary" asp-controller="categories" asp-action="edit" asp-route-id="@category.CategoryId" >Edit</a>
+                    </td>
+                    <td>
+                        @* <a class="btn btn-primary" asp-controller="categories" asp-action="edit" asp-route-id="@category.CategoryId">Edit</a> *@
+                        <a class="btn btn-secondary" >Delete</a>
                     </td>
                 </tr>
             }
