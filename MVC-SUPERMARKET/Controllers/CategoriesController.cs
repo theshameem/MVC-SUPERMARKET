@@ -29,5 +29,23 @@ namespace MVC_SUPERMARKET.Controllers
 
             return View(category);
         }
+
+        public IActionResult Add()
+        {
+            var category = new Category { };
+			return View(category);
+        }
+
+        [HttpPost]
+        public IActionResult Add(Category category)
+        {
+            if (ModelState.IsValid)
+            {
+                CategoriesRepository.AddCategory(category);
+                return RedirectToAction(nameof(Index));
+            }
+
+            return View(category) ;
+        }
     }
 }
