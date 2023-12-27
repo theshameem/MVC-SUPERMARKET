@@ -32,8 +32,7 @@ namespace MVC_SUPERMARKET.Controllers
 
         public IActionResult Add()
         {
-            var category = new Category { };
-			return View(category);
+            return View();  
         }
 
         [HttpPost]
